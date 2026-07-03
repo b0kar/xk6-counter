@@ -15,7 +15,7 @@ export const options = {
 };
 
 export default function () {
-  counter.increment();
+  counter.up();
 }
 
 export function teardown() {
