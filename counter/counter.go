@@ -11,20 +11,20 @@ type Counter struct {
 
 var globalCounter = &Counter{}
 
-func up() int {
+func Up() int {
 	globalCounter.mu.Lock()
 	defer globalCounter.mu.Unlock()
 	globalCounter.value++
 	return globalCounter.value
 }
 
-func get() int {
+func Get() int {
 	globalCounter.mu.Lock()
 	defer globalCounter.mu.Unlock()
 	return globalCounter.value
 }
 
-func reset() {
+func Reset() {
 	globalCounter.mu.Lock()
 	defer globalCounter.mu.Unlock()
 	globalCounter.value = 0
