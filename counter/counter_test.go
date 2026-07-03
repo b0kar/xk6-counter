@@ -6,31 +6,31 @@ import (
 )
 
 func TestCounter(t *testing.T) {
-	Reset()
+	reset()
 
-	if val := Get(); val != 0 {
+	if val := get(); val != 0 {
 		t.Errorf("Expected counter to be 0 after initialization, got %d", val)
 	}
 
-	if val := Increment(); val != 1 {
+	if val := up(); val != 1 {
 		t.Errorf("Expected counter to be 1, got %d", val)
 	}
-	if val := Increment(); val != 2 {
+	if val := up(); val != 2 {
 		t.Errorf("Expected counter to be 2, got %d", val)
 	}
 
-	if val := Get(); val != 2 {
+	if val := get(); val != 2 {
 		t.Errorf("Expected counter to be 2, got %d", val)
 	}
 
-	Reset()
-	if val := Get(); val != 0 {
+	reset()
+	if val := get(); val != 0 {
 		t.Errorf("Expected counter to be 0 after reset, got %d", val)
 	}
 }
 
 func TestCounterThreadSafety(t *testing.T) {
-	Reset()
+	reset()
 
 	const numVUs = 100
 	const incrementsPerVU = 10
@@ -49,7 +49,7 @@ func TestCounterThreadSafety(t *testing.T) {
 	wg.Wait()
 
 	expectedValue := numVUs * incrementsPerVU
-	actualValue := Get()
+	actualValue := get()
 
 	if actualValue != expectedValue {
 		t.Errorf("Expected counter to be %d, got %d", expectedValue, actualValue)
