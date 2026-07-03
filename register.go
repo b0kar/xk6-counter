@@ -7,15 +7,15 @@ import (
 
 type CounterModule struct{}
 
-func (m *CounterModule) up() int {
+func (m *CounterModule) Up() int {
 	return counter.Up()
 }
 
-func (m *CounterModule) get() int {
+func (m *CounterModule) Get() int {
 	return counter.Get()
 }
 
-func (m *CounterModule) reset() {
+func (m *CounterModule) Reset() {
 	counter.Reset()
 }
 
