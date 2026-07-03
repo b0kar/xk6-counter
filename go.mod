@@ -1,8 +1,8 @@
 module github.com/zagaris/xk6-counter
 
-go 1.23
+go 1.25
 
-require go.k6.io/k6 v0.55.0
+require go.k6.io/k6/v2 v2.1.0
 
 require (
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
