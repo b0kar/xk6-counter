@@ -8,15 +8,15 @@ import (
 type CounterModule struct{}
 
 func (m *CounterModule) up() int {
-	return counter.up()
+	return counter.Up()
 }
 
 func (m *CounterModule) get() int {
-	return counter.get()
+	return counter.Get()
 }
 
 func (m *CounterModule) reset() {
-	counter.reset()
+	counter.Reset()
 }
 
 func init() {
