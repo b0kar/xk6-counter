@@ -1,4 +1,4 @@
-module github.com/zagaris/xk6-counter
+module github.com/b0kar/xk6-counter
 
 go 1.25
 
