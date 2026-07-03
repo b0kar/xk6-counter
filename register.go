@@ -1,7 +1,7 @@
 package xk6_entry
 
 import (
-	"github.com/zagaris/xk6-counter/counter"
+	"github.com/b0kar/xk6-counter/counter"
 	"go.k6.io/k6/v2/js/modules"
 )
 
